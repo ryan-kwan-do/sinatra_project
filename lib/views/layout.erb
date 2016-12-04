@@ -1,20 +1,26 @@
 <html>
   <head>
-    <style>
-  	</style>
+    <title>Web Games</title>
+    <link rel="stylesheet" href="styles.css"/>
   </head>
   <body>
-  	<h1>Online Web Games: A Sinatra Project</h1>
-  	<header>
-  	  <table>
-  	  	<tr>
-  	  	  <td><a href=/>Home</a></td>
-  	  	  <td><a href=guessing>Guessing Game</a></td>
-  	  	  <td>Ceasar Cypher</td>
-  	  	  <td>Hangman</td>
-  	  	</tr>
-  	  </table>
-  	</header>
+    <div id= "headerwrap">
+    <header id = "header">
+      <h1>Online Web Games: A Sinatra Project</h1>
+    </header>
+    </div>
+    <div id="navigationwrap">
+      <div id="navigation">
+      <table>
+        <tr>
+          <td><a href=/>Home</a></td>
+          <td><a href=guessing>Guessing Game</a></td>
+          <td>Ceasar Cypher</td>
+          <td>Hangman</td>
+        </tr>
+      </table>
+      </div>
+    </div>
     <p> <%= yield %> </p>
   </body>
 </html>
