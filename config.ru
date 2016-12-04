@@ -1,2 +1,2 @@
-require './hello'
+require './web_games'
 run Sinatra::Application
