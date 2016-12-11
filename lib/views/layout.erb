@@ -4,23 +4,35 @@
     <link rel="stylesheet" href="styles.css"/>
   </head>
   <body>
-    <div id= "headerwrap">
-    <header id = "header">
-      <h1>Online Web Games: A Sinatra Project</h1>
+    <nav id="navigation" class="nav-primary" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">  
+      <div class="wrap">
+      <a href="#" id="menu-icon" class="menu-icon"></a>
+      <span></span>
+        <ul class="menu omega-nav-menu menu-primary">
+          <li><a href=/>Home</a></li>
+          <li><a href=guessing>Guessing Game</a></li>
+          <li><a href=#>Ceasar Cypher</a></li>
+          <li><a href=#>Hangman</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header id="header" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+      <div class="wrap">
+        <div class="title-area">
+          <h2 class="site-title" itemprop="headline"><a href=/Home title="Sinatra Web Games" >Sinatra Web Games</a></h2>
+        </div>
+      </div>
     </header>
-    </div>
-    <div id="navigationwrap">
-      <div id="navigation">
-      <table>
-        <tr>
-          <td><a href=/>Home</a></td>
-          <td><a href=guessing>Guessing Game</a></td>
-          <td>Ceasar Cypher</td>
-          <td>Hangman</td>
-        </tr>
-      </table>
+    <div class = "site-inner">
+      <div class = "wrap">
+      <main class="content" id="content" role="main" itemprop="mainContentOfPage">
+        <div class = "entry-wrap">
+          <div class="entry-content" itemprop="text">
+            <p> <%= yield %> </p>
+          </div>
+        </div>
+      </main>
       </div>
     </div>
-    <p> <%= yield %> </p>
   </body>
 </html>
