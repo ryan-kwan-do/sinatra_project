@@ -7,5 +7,6 @@ get '/' do
 end
 
 get '/guessing' do
+  game = GuessingGame::Game.new
   erb :guessing, layout: :layout
 end
