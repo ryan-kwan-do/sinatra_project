@@ -1,7 +1,7 @@
 module GuessingGame
   class Game
 
-  	attr_reader :number
+  	attr_accessor :number
 
   	def initialize
   	  @number = rand(100)

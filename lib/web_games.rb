@@ -8,5 +8,6 @@ end
 
 get '/guessing' do
   game = GuessingGame::Game.new
-  erb :guessing, layout: :layout
+  number = game.number
+  erb :guessing, :locals => {:number => number}, layout: :layout
 end
