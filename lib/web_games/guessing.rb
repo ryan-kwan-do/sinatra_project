@@ -1,14 +1,21 @@
 module GuessingGame
   class Game
 
-  	attr_accessor :number
+  	@@count = 0
+  	attr_accessor :number, :count
 
   	def initialize
   	  @number = rand(100)
+  	  @@count += 1
   	end
 
-  	def new_game?
-  	  true
+  	#For returning game counts
+  	def self.count
+      @@count
+  	end
+
+  	def self.new_game?
+  	  Game.new if @@count == 0
   	end
   end
 end

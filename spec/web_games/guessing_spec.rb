@@ -8,11 +8,14 @@ module GuessingGame
   	  it 'creates a game with a random number' do
   	  	expect(game.number).to be_within(50).of(50)
   	  end
+      it 'increases count of games' do
+        expect(Game.count).to eq(1)
+      end
     end
 
     describe '#new_game?' do
       it 'only initializes if game does not exist' do
-        expect(game.new_game?).to be false
+        expect(Game.new_game?).to be nil
       end
     end
 
