@@ -8,7 +8,7 @@ module GuessingGame
   	end
 
   	def new_game?
-  		
+  	  true
   	end
   end
 end

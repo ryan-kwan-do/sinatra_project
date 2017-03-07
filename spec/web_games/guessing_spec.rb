@@ -11,8 +11,8 @@ module GuessingGame
     end
 
     describe '#new_game?' do
-      it 'only returns the variable "game" if it does not already exist' do
-        expect(new_game?).to_be false
+      it 'only initializes if game does not exist' do
+        expect(game.new_game?).to be false
       end
     end
 
