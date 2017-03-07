@@ -6,5 +6,9 @@ module GuessingGame
   	def initialize
   	  @number = rand(100)
   	end
+
+  	def new_game?
+  		
+  	end
   end
 end
