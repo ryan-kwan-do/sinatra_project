@@ -11,5 +11,6 @@ end
 
 get '/guessing' do
   session[:game] ||= GuessingGame::Game.new
-  erb :guessing, :locals => {:number => session[:game].number}, layout: :layout
+  guess = params['guess'].to_i
+  erb :guessing, :locals => {:number => session[:game].number, :guess => guess}, layout: :layout
 end

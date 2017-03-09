@@ -1,11 +1,13 @@
 
-<p>This is the guessing game.</p>
+<p>This is the guessing game. Guess a number and click submit.</p>
 
 <form>
   <input type='text' name='guess' />
   <input type='submit' value='Guess!' />
 </form>
 
-
-<p>This is the number: </p> <%= number %>
+	<%= if guess != number then "Wrong"
+		  else "Right!"
+		end %>
+<p>This is the number:  <%= number %> </p>
 <p>It's an easy guessing game.</p>
