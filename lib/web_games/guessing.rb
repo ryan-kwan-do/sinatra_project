@@ -2,10 +2,11 @@ module GuessingGame
   class Game
 
   	@@count = 0
-  	attr_accessor :number, :count
+  	attr_accessor :number, :count, :turns
 
   	def initialize
   	  @number = rand(100)
+  	  @turns = 0
   	  @@count += 1
   	end
 
@@ -17,5 +18,13 @@ module GuessingGame
   	def self.new_game?
   	  Game.new if @@count == 0
   	end
+
+  	#if guess is too high, return too high
+  	def player_guess(guess)
+  	  if guess != number then "Wrong"
+	    else "Right!"
+	  end
+  	end
+
   end
 end

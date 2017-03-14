@@ -19,6 +19,10 @@ module GuessingGame
       end
     end
 
-  	describe '#user_guess'
+  	describe '#player_guess' do
+      it 'returns text based on the guess' do
+        expect(game.player_guess(5)).to be_instance_of(String)
+      end
+    end
   end
 end
