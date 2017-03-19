@@ -21,8 +21,9 @@ module GuessingGame
 
   	#if guess is too high, return too high
   	def player_guess(guess)
-  	  if guess != number then "Wrong"
-	    else "Right!"
+  	  if guess == 0 then ""
+  	  	elsif guess != number then "Wrong!"
+  	  	else "Right!" 
 	  end
   	end
 
