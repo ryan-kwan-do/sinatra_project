@@ -26,8 +26,19 @@ module GuessingGame
   	  	elsif guess > number then "Your guess is too high."
   	  	elsif guess < number - 5 then "Your guess is way too low!"
   	  	elsif guess < number then "Your guess is too low!"	
-  	  	else "Right!" 
+  	  	else correct_guess
 	  end
+  	end
+
+
+  	def correct_guess
+  	  "Right!"
+  	end
+
+  	def reveal_text(guess)
+  	  if guess == number then "<p>This is the number: #{guess}, and you guessed it!</p>"
+  	    else nil
+  	  end
   	end
 
   end
