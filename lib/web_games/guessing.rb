@@ -22,10 +22,13 @@ module GuessingGame
   	#if guess is too high, return too high
   	def player_guess(guess)
   	  if guess == 0 then ""
-  	  	elsif guess != number then "Wrong!"
+  	  	elsif guess > number + 5 then "Your guess is way too high!"
+  	  	elsif guess > number then "Your guess is too high."
+  	  	elsif guess < number - 5 then "Your guess is way too low!"
+  	  	elsif guess < number then "Your guess is too low!"	
   	  	else "Right!" 
 	  end
   	end
 
   end
-end
+end 
